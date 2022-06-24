@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  django:
+    build: ./django
+    image: django
+    container_name: 'ex0624_admin_django'
+    ports:
+      - 8000:8000
+    environment:
+      - DEBUG=1
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../workspace:/fwpc0811/workspace
